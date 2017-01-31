@@ -1,0 +1,25 @@
+<h1>Components for apply form</h1>
+<form novalidate [formGroup]="applicant" (submit)="submit()">
+  <label>
+    <span>Job Ref: </span>
+    <input type="text" placeholder="" formControlName="id" >
+  </label><br>
+  <label>
+    <span>Full name</span><br>
+    <input type="text" placeholder="Your full name" formControlName="contactName" >
+  </label><br>
+  <label>
+    <span>Email address</span><br>
+    <input type="email" placeholder="Your email address" formControlName="contactEmail" >
+  </label><br>
+  <label>
+    <span>Message </span><br>
+    <textarea placeholder="Short message" rows="4" cols="40" formControlName="contactMsg">
+    </textarea>
+  </label><br>
+  <label>
+    <span>File as FormData</span><br>
+    <input type="file" (change)="setFile($event)" >
+  </label><br>
+  <button type="submit">Sign up</button>
+</form><br>
